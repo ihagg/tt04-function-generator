@@ -11,19 +11,26 @@ module tt_um_function_generator (
     input  wire       rst_n     // reset_n - low to reset
 );
 
+    wire rst;
+    wire [1:0] sel;
+    wire [5:0] div;
     wire [7:0] duty;
     wire [7:0] duty_sin;
     wire [7:0] duty_saw;
     wire [7:0] duty_tri;
     wire [7:0] count;
     wire clk_duty;
+    wire pwm;
   
-    assign rst = ! rst_n;
-    assign sel = ui_in[1:0];
-    assign div = ui_in[7:2];
+    assign rst = !rst_n;
+    assign sel[1:0] = ui_in[1:0];
+    assign div[5:0] = ui_in[7:2];
+
     assign duty = sel[1] ?
                  (sel[0] ? duty_tri : duty_saw) :
                  (sel[0] ? duty_sin : 0) ;
+
+    assign uo_out[0] = pwm;
   
     clkdiv clkdiv(
       .clkin(clk),
