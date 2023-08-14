@@ -31,6 +31,35 @@ module tt_um_function_generator (
                  (sel[0] ? duty_sin : 0) ;
 
     assign uo_out[0] = pwm;
+
+    // unsued output pins
+    assign uo_out[7] = 1'b0;
+    assign uo_out[6] = 1'b0;
+    assign uo_out[5] = 1'b0;
+    assign uo_out[4] = 1'b0;
+    assign uo_out[3] = 1'b0;
+    assign uo_out[2] = 1'b0;
+    assign uo_out[1] = 1'b0;
+
+    // unsued inout pins
+    assign uio_out[7] = 1'b0;
+    assign uio_out[6] = 1'b0;
+    assign uio_out[5] = 1'b0;
+    assign uio_out[4] = 1'b0;
+    assign uio_out[3] = 1'b0;
+    assign uio_out[2] = 1'b0;
+    assign uio_out[1] = 1'b0;
+    assign uio_out[0] = 1'b0;
+
+    // unsued inout enable pins
+    assign uio_oe[7] = 1'b0;
+    assign uio_oe[6] = 1'b0;
+    assign uio_oe[5] = 1'b0;
+    assign uio_oe[4] = 1'b0;
+    assign uio_oe[3] = 1'b0;
+    assign uio_oe[2] = 1'b0;
+    assign uio_oe[1] = 1'b0;
+    assign uio_oe[0] = 1'b0;
   
     clkdiv clkdiv(
       .clkin(clk),
