@@ -6,14 +6,9 @@ project:
 # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. 
 # Source files must be in ./src and you must list each source file separately
   source_files:        
-    - tt_um_function_generator.v
-    - pwmgen.v
-    - lutsin.v
-    - lutsaw.v
-    - luttri.v
-    - counter.v
-    - clkdiv.v
-  top_module:  "tt_um_function_generator"      # Put the name of your top module here, must start with "tt_um_". Make it unique by including your github username
+    - tt_um_ihagg_testchip1.v
+
+  top_module:  "tt_um_ihagg_testchip1"      # Put the name of your top module here, must start with "tt_um_". Make it unique by including your github username
 
 # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"    # Valid values: 1x1, 1x2, 2x2, 4x2 or 8x2
@@ -26,18 +21,18 @@ yaml_version: 4
 #
 # Here is a great example: https://github.com/davidsiaw/tt02-davidsiaw-stackcalc/blob/38c5647f83aad2aec675d566aa3d67b98f0aac81/info.yaml
 documentation: 
-  author:       "Ignacio Herrera Alzu"      # Your name
-  title:        "Function Generator"      # Project title
+  author:       "Ignacio Herrera Alzu" # Your name
+  title:        "Test Chip 1" # Project title
   language:     "Verilog" # other examples include Verilog, Amaranth, VHDL, etc
-  description:  "It generates a PWM signal with sine, saw or triangular pattern"      # Short description of what your project does
+  description:  "Miscellaneous digital circuits for educational purposes" # Short description of what your project does
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
-      Explain how your project works
+      Test Chip 1 includes miscellaneous digital circuits for educational purposes.
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-      Explain how to test your project
+      Test Chip 1 includes miscellaneous digital circuits for educational purposes.
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:               
